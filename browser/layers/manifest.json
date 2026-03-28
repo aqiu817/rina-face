@@ -1,0 +1,37 @@
+{
+  "aventurine.png": {
+    "background": "./layers/aventurine/background.png",
+    "subject": "./layers/aventurine/subject.png",
+    "logo": "./layers/aventurine/logo.png"
+  },
+  "castorice.png": {
+    "background": "./layers/castorice/background.png",
+    "subject": "./layers/castorice/subject.png",
+    "logo": "./layers/castorice/logo.png"
+  },
+  "cyrene.png": {
+    "background": "./layers/cyrene/background.png",
+    "subject": "./layers/cyrene/subject.png",
+    "logo": "./layers/cyrene/logo.png"
+  },
+  "firefly.png": {
+    "background": "./layers/firefly/background.png",
+    "subject": "./layers/firefly/subject.png",
+    "logo": "./layers/firefly/logo.png"
+  },
+  "kafka.png": {
+    "background": "./layers/kafka/background.png",
+    "subject": "./layers/kafka/subject.png",
+    "logo": "./layers/kafka/logo.png"
+  },
+  "phainon.png": {
+    "background": "./layers/phainon/background.png",
+    "subject": "./layers/phainon/subject.png",
+    "logo": "./layers/phainon/logo.png"
+  },
+  "ruan mei.png": {
+    "background": "./layers/ruan mei/background.png",
+    "subject": "./layers/ruan mei/subject.png",
+    "logo": "./layers/ruan mei/logo.png"
+  }
+}

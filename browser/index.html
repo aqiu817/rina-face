@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Face Parallax Demo</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="stage-panel">
+      <div class="stage-frame">
+        <canvas id="stage" width="1000" height="1000" aria-label="视差预览"></canvas>
+        <div class="status-bar" id="status">等待加载</div>
+      </div>
+      <div class="hint">
+        摄像头会读取面部位置与头部倾斜，驱动背景、人物、logo 三层的不同位移。
+      </div>
+    </section>
+
+    <aside class="control-panel">
+      <h1>单图视差控制台</h1>
+
+      <label class="field">
+        <span>选择素材</span>
+        <select id="imageSelect"></select>
+      </label>
+
+      <div class="button-row">
+        <button id="cameraButton" type="button">开启摄像头</button>
+        <button id="resetButton" type="button" class="ghost">重置参数</button>
+      </div>
+
+      <div class="button-row">
+        <button id="recenterButton" type="button" class="ghost">重置摄像头位置</button>
+      </div>
+
+      <section class="group">
+        <h2>响应</h2>
+        <label class="field range">
+          <span>响应速度</span>
+          <input id="response" type="range" min="0.05" max="0.45" step="0.01" value="0.22">
+          <output id="responseValue">0.22</output>
+        </label>
+        <label class="field range">
+          <span>X 轴幅度</span>
+          <input id="xStrength" type="range" min="10" max="90" step="1" value="44">
+          <output id="xStrengthValue">44</output>
+        </label>
+        <label class="field range">
+          <span>Y 轴幅度</span>
+          <input id="yStrength" type="range" min="8" max="70" step="1" value="30">
+          <output id="yStrengthValue">30</output>
+        </label>
+        <label class="field range">
+          <span>前景跟随</span>
+          <input id="tiltStrength" type="range" min="2" max="20" step="0.5" value="8">
+          <output id="tiltStrengthValue">8</output>
+        </label>
+      </section>
+
+      <section class="group">
+        <h2>摄像头校准</h2>
+        <label class="field range">
+          <span>水平偏移</span>
+          <input id="cameraOffsetX" type="range" min="-0.20" max="0.20" step="0.01" value="0">
+          <output id="cameraOffsetXValue">0.00</output>
+        </label>
+        <label class="field range">
+          <span>垂直偏移</span>
+          <input id="cameraOffsetY" type="range" min="-0.20" max="0.20" step="0.01" value="0">
+          <output id="cameraOffsetYValue">0.00</output>
+        </label>
+        <label class="field range">
+          <span>距离偏移</span>
+          <input id="cameraOffsetZ" type="range" min="-0.40" max="0.40" step="0.01" value="0">
+          <output id="cameraOffsetZValue">0.00</output>
+        </label>
+      </section>
+
+      <section class="group">
+        <h2>图层</h2>
+        <label class="toggle">
+          <input id="showLogo" type="checkbox">
+          <span>显示 Logo</span>
+        </label>
+      </section>
+
+      <video id="camera" playsinline muted hidden></video>
+    </aside>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
